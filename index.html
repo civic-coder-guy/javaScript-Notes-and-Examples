@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+<h2>One of the many things JavaScript can do!</h2>
+<p id="change">JavaScript can change HTML content.</p>
+<button type="button" onclick='document.getElementById("change").innerHTML = "Hello JavaScript!"'> Click this button see its magic!</button>
+<button type="button" onclick='document.getElementById("change").innerHTML = "JavaScript can change HTML content."'> Click this button to revert back</button>
+<p> As you enter your code JavaScript can accpet both double and single quotes.</p>
+
+<h2>JavaScript can also change HTML attribute values</h2>
+<p>In this example JavaScript is going to change the value of the SRC(source) attribute of an image.</p>
+<button onclick="document.getElementById('myImage').src='/home/te03civiclx/Documents/JavaScript notes and Examples/Images/Sun.png'">bring out the Sun</button>
+<img id="myImage" src="/home/te03civiclx/Documents/JavaScript notes and Examples/Images/Moon.png" style="width:100px">
+<button onclick="document.getElementById('myImage').src='/home/te03civiclx/Documents/JavaScript notes and Examples/Images/Moon.png'">bring out the Moon</button>
+
+<h2>JavaScript can change the HTML style or CSS.</h2>
+<p id="size">Watch me grow becuase I ate my veggies!</p>
+<button type="button" onclick="document.getElementById('size').style.fontSize='35px'">Click to Eat Veggies!</button>
+<button type="button" onclick="document.getElementById('size').style.fontSize='20px'">Click to use the Shrink Ray!</button>
+
+<h2>JavaScript can hide specifc HTML elements.</h2>
+<p id="hide">Wanna see me Disappear?</p>
+<button type="button" onclick="document.getElementById('hide').style.display='none'">Click to hide me!</button>
+
+<h2>JavaScript can also show hidden elements on a page.</h2>
+<p id="show" style="display:none">OH YOU FOUND ME!</p>
+<button type="button" onclick="document.getElementById('show').style.display='block'">Click to reveal me!</button>
+
+<h2>Did you Know?</h2>
+<p>JavaScript was invented by <a href="https://en.wikipedia.org/wiki/Brendan_Eich">Brendan Eich</a> in 1995, and became the <a href="https://www.ecma-international.org/">ECAM</a> standard in 1997.</p>
+
+<h1>In HTML, JavaScript code goes in between the script tags</h1>
+<p>**Fix the code here** The following code allows you to input JavaScript: <br><code>&lt;script&gt; <br>document.getElementById('demo').innerHTML = "Hey Look your first JavaScript!"; <br>&lt;/script&gt;</code></p>
+<p>A Function in JavaScript is a block of code, that can be executed when called for.</p>
+<p>You can place any amount of scripts you want in an HTML document. Scripts be be placed in the body or head section or both.</p>
+<p>You can even place scripts at the bottom of the &lt;body&gt; element and improves display speed.</p>
+<p>You can also place scritps in external files.</p>
+<p>Ensure to save the file as <b>myscript.js</b>.</p>
+<p>Use of external scripts are useful for when you have to use the smae code in different web pages.</p>
+<p>To use your external script just use the nam eof the script file in the <code>SRC</code> attribute of a &lt;script&gt;.</p>
+<p><code>&lt;script SRC="customscript.js&gt;&lt;script&gt;</code></p>
+
+<h2>Advantages to External JavaScript</h2>
+<p>It seperates the HTML and code, it makes your easier to read and maintain anc cached JavaScript files can speed up page loads.</p>
+<p><code>&lt;script SRC="customscript1.js&gt;&lt;script&gt;</code><br><code>&lt;script SRC="customscript2.js&gt;&lt;script&gt;</code></p>
+<p>There are three ways to reference an external script: with a full URL, a file path or without any path.<br>
+<code>&lt;script SRC="https://www.asitename.com/js/customscript1.js&gt;&lt;script&gt;</code><br>
+<code>&lt;script SRC="/jscustomscript2.js&gt;&lt;script&gt;</code><br>
+<code>&lt;script SRC="jscustomscript2.js&gt;&lt;script&gt;</code>
+
+</p>
+
+<h1>JavaScript Output</h1>
+
+<ul>
+    <li><code>innerHTML</code> writes into an HTL Element.</li>
+    <li><code>document.write()</code> writes into the HTML output.</li>
+    <li><code>window.alert()</code> write into an alert box.</li>
+    <li><code>console.log</code> writes into the broswer console.</li>
+</ul>
+
+<p>changing the innerHTML property of an HTML Element is a common way to display data. <i>Reference: <a href="https://www.w3schools.com/js/js_output.asp">W3 Schools</a></i></p>
+<p>Using <code>document.write()</code> after and HTMl document is loaded, <b>will delete all existing HTML</b> <i>Reference: <a href="https://www.w3schools.com/js/js_output.asp">W3 Schools</a></i></p>
+<p>the <code>document.write</code> shoudl only be used for testing only</p>
+<p>You dont have to use the <code>window</code> keyword. In JavaScript, the window object is the global scope object, which means that variables, properties and methods by default belong to the window object, which also means using the <code>window.</code> keyword is optional. An example is <code>alert(1+1)</code></p>
+<p>using the <code>console.log()</code> is for debigginer purposes and is a method to display data.</p>
+<p>JavaScript does not hand print object or print method and you cannot access output devices. The only expcetion is that you can call the <code>window.print()</code> method in teh broswerto rpint the contents of teh current window.</p>
+
+<h1>JavaScript Statements</h1>
+<p>A Computer program is a list of instructions to be executed by a computer. In a programming language, the programming instructions are called statments. A JavaScript program is a list of programming statements.</p>
+<p>In HTML, Javascript programs are executed by a web browser.</p>
+<p>JavaScript statements are composed of: Values, Operators, Expressions, Keywords, and Comments. In the example below the statement tells the browser to write "Hello World" inside an HTML element with the id="hi"<br><code>document.getElementById("hi").innerHTML = "Hello World!";</code></p>
+<p>Most JavaScript programs contain many JavaScript Statements.The Statements are executed, one by one, in teh same order as they are written.</p>
+<p>JavaScript programs and statements are offten called the JavaScript code.</p>
+<p>Semicolons seperate JavaScript Statements. Ensure to add a Semicolon a the end of each executable statement</p>
+<p><code>
+    let a, b, c; //Declares three variables<br>
+    a = 5;       //Assigns the value of 5 to a<br>
+    b = 6;       //Assigns the value of 6 to b<br>
+    c = a + b;   //Assigns the sum of a and b to c
+</code></p>
+<p> When seperated by Semicolons, multiple statements on one line are allowed as show in this example:</p>
+<p><code>a = 5; b = 6; c = a =b;</code></p>
+<p>In some examples on the web you might see examples without semicolons. However, ending statements with a semicolon is not required, but hightly recommended.</p>
+
+<h2> JavaScript Whitespace</h2>
+<p>JavaScript ignores multiple spaces. You can add white space to your script to make it more readable.</p>
+<p>A good proctice is to put spaces around operators (= + - * /).</p>
+
+<h2>JavaScript line Length and Line Breaks</h2>
+
+<p>For the best readability, programmers often like to avoid code lines longer than eighty characters. If the JavaScript statement does not fit on one line, the best place to break it is after an Operator.</p>
+<p>Example</p>
+<code>
+    document.getElementById("demo").innerHTML = <br>
+    "Hello World!";
+</code>
+
+<h2>JavaScript Code Blocks</h2>
+
+<p>JavaScript statements can be group together in code block, inside curly brackers{}.</p>
+<p>The prupose of code blocks is to define statements to be executed together.
+<p>One place you will find statements grouped together in blocks are in JavaScript functions</p>
+<p>Example</p>
+<code>
+    function my Function(){<br>
+        document.getElementById("demo1").innerHTML = "Hello World!";<br>
+        document.getElementById("demo2").innerHTML = "How much do you like JavaScript?";<br>
+    }
+</code>
+
+<h2>JavaScript Keywords</h2>
+
+<p>Reserved Keywords<p>
+
+<h3>Some Reserved Words</h3>
+<table>
+    <tr>
+        <th><b>Keyword</b></th>
+        <th><b>Descrption</b></th>
+    </tr>
+    <tr>
+        <td>var</td>
+        <td>Declares a Variable</td>
+    <tr>
+        <td>let</td>
+        <td>Declares a blcok variable</td>
+    </tr>
+    <tr>
+        <td>const</td>
+        <td>Declares a block constant</td>
+    </tr>
+    <tr>
+        <td>if</td>
+        <td>Marks a block of statements to be executed on a condition
+    <tr>
+        <td>switch</td>
+        <td>Marks a block of statements to be executed in different cases</td>
+    </tr>
+    <tr>
+        <td>for</td>
+        <td>Marks a block of statements to be executed in a loop</td>
+    </tr>
+    <tr>
+        <td>function</td>
+        <td>Declares a function</td>
+    </tr>
+    <tr>
+        <td>return</td>
+        <td>Exits a function</td>
+    <tr>
+        <td>try</td>
+        <td>Implements error handling to a block of statements</td>
+    </tr>
+</table>
+
+<p>JavaScript reserved words cannot be used as names for variables.</p>
+<p>To see more reserved keywords you can go to <a href="https://www.w3schools.com/js/js_reserved.asp">W3 Schools</a> or you can go to <a href="https://www.javascript.com">JavaScript</a></p>
+
+<h1>JavaScript Syntax</h1>
+
+<p>JavaScript Syntax is the set of rules, how JavaScriptprograms are constructed.</p>
+
+<h2>JavaScript Values</h2>
+
+<p>There are two types of JavaScript Syntax values: Fixed and Variable.</p>
+<p>Fixed Values are called <b>Literals</b>.</p>
+<p>Variable values are called <b>Variables</b></p>
+<h2>JavaScript Literals</h2>
+
+<p>There are two important Syntax rules for fixed values:</p>
+
+<ul>
+    <li><b>Numbers</b> are written with or without decimals: <code>10.20</code> or <code>1001</code><li>
+    <li><b>Strings</b> are text written within double or single quotes: <code>"John Doe"</code> or <code>"John Smith"</code></li>
+</ul>
+
+<h2>JavaScript Expressions</h2>
+
+<p>An expression is a combination of values, variable, and operators, which computes to a value.</p>
+<p>The computation is called and evaluation. Example: 5 * 10 evaluates to 50</p>
+<p>Expressions can alway contain a variable. Example: X * 10.</p>
+<p>The values can be of various types, such as numbers and strings.Example: <code>"John" + " " + "Doe"</code> evalutes to <code>"John Doe"</code></p>
+
+<h2>JavaScript Keywords</h2>
+
+<p>JavaScript keywords are used to identify actions to be performed.</p>
+<p>The <code>let</code> keyword tells the browser to create variables.</p>
+
+<p>Example:<br><code>let x, y;<br>x = 5 + 6;<br>y = x * 10;</code>
+
+<p>The <code>var</code> keyword also tell the browser to create variables.</p>
+
+<p>Example:<br><code>var x, y;<br>x - 5 + 6;<br>y = x * 10;</code></p>
+
+<h2>JavaScript Comments</h2>
+<p>Not all javascript statementare executed.</p>
+<p>Code ager double slashes "//" or between "/* and */" are treated as comments and these are ignored and are not executed.</p>
+<p>Example:<br><code> let x = 5;//Will be executed.</code><br>//<code> x = 6;" will not be executed.</p>
+
+<h2>JavaScript Identifier/Name</h2>
+<p>These are names for JavaScript</p>
+<p>Identifiers are used to name variables, keywords, and functions.</p>
+<p>The rules for legal names are the same in most programming languages.</p>
+<p>A name must begin with:</p>
+<ul>
+    <li>A letter (A-Z) or (a-z)</li>
+    <li>A dollar dign ($)</li>
+    <li>Or and underscore (_)</li>
+</ul>
+
+<p>Numbers are not allowed as the first character in names, this way JavaScript can distinguish indentifiers from numbers</p>
+
+<h2>JavaScript is Case Sensitive</h2>
+<p>The variables <code>zipcode</code> and <code> zipCode</code> are two different variables.</p>
+<p>Example:<br><code>let zipcode, zipCode;<br>zipcode = "76513";<br>zipCode = "76528";</code></p>
+<p>JavaScript does not interpret LET or Let as the keyword let</p>
+
+<h2>JavaScript and Camel Case</h2>
+<p>There are many different way of joining multiple words into one varibale name</p>
+<p>Hyphens are not allowed in JavaScript. They are reserved for subtractions.</p>
+
+<p><b>Underscore:</b>first_name, last_name</p>
+<p><b>Upper Camel Case (Pascal Case):</b>FirstName, LastName</p>
+<p><b>Lower Camel Case:</b>firstName, lastName</p>
+
+<h2>JavaScript Character set</h2>
+<p>JavaScript uses teh <b>Unicode</b> character set. This covers <i>almost</i> all the characters, puncuations, and symbols in the world.</p>
+<p>You can see more at <a href="https://www.w3schools.com/charsets/ref_html_utf8.asp">W3 School</a></p>
+
+<h1>JavaScript Comments</h1>
+<p>Comments are used to explain your code and to also make it more readable. You can also use them to nto execute a specific piece of code.</p>
+
+<h2>Single Line Comments</h2>
+<p>Single line comments start with <code id="slash">//</code>. Any text between <code id="slash">//</code> will be ignored by JavaScript (will not be executed).</p>
+<p>Example:<br><code>// Change Heading:<br>document.getElementById("myBlog").innerHTML = "My first Blog Post";</code></p>
+<p>Example:<br><code>document.getElementById("myBlog").innerHTML = "My first blog post"; //change heading</code></p>
+<p>Example:<br><code>let x = 5; //Declare x, give it the value of 5</code></p>
+
+<h2>Multi-line Comments</h2>
+<p>Multi-line comments start with <code>/*</code> and end with <code>*/</code>.</p>
+<p>Any text between <code>/*</code> and <code>*/</code> will be ignored by JavaScript.</p>
+<p>Example:<br><code>/*<br>This code will<br>change something<br>in your html page<br>*/<br>document.getElementById("myBlog") = "My blog change";<br>document.getElementById("myblogg").innerHTML = "My first paragraph.;</code></p>
+<p>The most common method id single line comments. Block comments are used in formal documentation</p>
+
+<h2>Using Comments to Prevent Execution</h2>
+<p>Commenting out lines of code is useful for code testing.</p>
+<p>Adding <code>//</code>in front of a code changes teh code line from executable to a comment.</p>
+
+<h1>JavaScript Variables</h1>
+<p>There are four ways to declare a JavaScript Variable:</p>
+<ul>
+    <li><code>var</code></li>
+    <li><code>let</code></li>
+    <li><code>const</code><li>
+    <li>The obvious of using nothing</li>
+</ul>
+
+<p>Variables are containers for storing data.</p>
+<p>In the example <code>a</code>, <code>b</code>, and <code>c</code> are variables each with the <code>var</code> keyword</p>
+<p><code>var a = 1;<br>
+var b = 2;<br>
+var c = a + b;</code>
+</p>
+
+<p>In the next example we will do the samething but we will use <code>let</code> keyword</p>
+<p><code>let a = 1;<br>
+let b = 2;<br>
+let c = a + b;</code>
+</p>
+
+<p>The next example will show the same varibales but undeclared</p>
+<p><code>a = 5;<br>
+b = 6;<br>
+c = a + b;</code>
+</p>
+
+
+<h2></h2>
+
+</body>
+</html>
